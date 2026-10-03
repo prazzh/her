@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6dfe2">
+  <title>For Piu ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pixel-sparkles" id="sparkles"></div>
+  <div class="floating-hearts" id="hearts"></div>
+
+  <button class="music-toggle" id="musicToggle" title="Play music">
+    ♫ <span id="musicLabel">music</span>
+  </button>
+  <audio id="ourMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <section id="home" class="screen active">
+      <div class="hero-card">
+        <div class="small-text">♡ a tiny dream, made for one girl ♡</div>
+        <img class="hero-cat" src="cat_heart.gif" alt="Cute pixel cat">
+        <h1>Welcome to<br><span>Piu's Dream World</span> ♡</h1>
+        <p>
+          11 months of you, me, late-night calls, Free Fire,
+          silly fights, understanding… and a love that stayed.
+        </p>
+        <button class="pixel-btn" id="startBtn">enter her world ♡</button>
+        <div class="tap-note">click the little hearts as you go ✦</div>
+      </div>
+    </section>
+
+    <section id="world" class="screen">
+      <header class="topbar">
+        <div>PIU ♡ FROGII</div>
+        <div class="chapter-count" id="chapterCount">1 / 7</div>
+      </header>
+
+      <div class="scene scene-active" data-scene="1">
+        <div class="scene-card">
+          <div class="scene-label">✦ THE FIRST STAR ✦</div>
+          <h2>It started in Free Fire.</h2>
+          <p>
+            First week of August, 2025.<br>
+            We talked about your voice first…
+            and somehow that little conversation became <b>us</b>.
+          </p>
+          <button class="pixel-btn next">next little moment →</button>
+        </div>
+      </div>
+
+      <div class="scene" data-scene="2">
+        <div class="scene-card">
+          <div class="scene-label">♡ FALLING WITHOUT KNOWING ♡</div>
+          <h2>I don't even know<br>when I fell for you.</h2>
+          <p>
+            There was no exact day. No exact reason.<br><br>
+            Maybe it happened through your cute, innocent voice,
+            your smile, your questions, your behaviour,
+            the way you respect everyone…
+            or maybe it happened simply because you are <b>you</b>.
+          </p>
+          <button class="pixel-btn next">keep going ♡</button>
+        </div>
+      </div>
+
+      <div class="scene" data-scene="3">
+        <div class="scene-card wide">
+          <div class="scene-label">✦ VERY PIU THINGS ✦</div>
+          <h2>Tap the things<br>that make Frogii smile.</h2>
+          <div class="love-clicks" id="loveClicks">
+            <button data-note="You calling me <b>pagal</b> will never stop being cute. 😭♡">PAGAL</button>
+            <button data-note="You calling me <b>noob</b> somehow sounds sweeter when it comes from you.">NOOB</button>
+            <button data-note="Your <b>Frogii</b> is secretly very happy whenever you call me that. 🐸">FROGII</button>
+            <button data-note="I genuinely enjoy irritating you… mostly because your reactions are adorable.">IRRITATE U</button>
+            <button data-note="Your phone is still officially <b>dumb</b>. I don't make the rules. 📱">DUMB PHONE</button>
+            <button data-note="<b>Kittu</b> — your little name in my heart. ♡">KITTU</button>
+          </div>
+          <div class="click-status" id="clickStatus">0 / 6 opened</div>
+          <button class="pixel-btn next" id="clickNext">there's more →</button>
+        </div>
+      </div>
+
+      <div class="scene" data-scene="4">
+        <div class="scene-card">
+          <div class="scene-label">☁ THE STORM ☁</div>
+          <h2>We were never perfect.<br>We were real.</h2>
+          <p>
+            We had misunderstandings.<br>
+            We had clashes.<br>
+            Last month, we almost gave up on each other.
+          </p>
+          <div class="quote-box">
+            <span>♡</span>
+            <p>“Jab bhi tum low feel hote ho toh batao…<br>
+            main tumhare saath ho. Dono milke theek karenge.”</p>
+          </div>
+          <p class="soft">
+            Maybe that's why this means so much to me:
+            even after the hard days, <b>love and understanding brought us back.</b>
+          </p>
+          <button class="pixel-btn next">one more chapter →</button>
+        </div>
+      </div>
+
+      <div class="scene" data-scene="5">
+        <div class="scene-card wide">
+          <div class="scene-label">✦ 11 LITTLE STARS ✦</div>
+          <h2>11 months.<br>11 tiny pieces of us.</h2>
+          <p class="soft">Tap every star. Let them tell you what you mean to me.</p>
+
+          <div class="star-map" id="starMap"></div>
+          <div class="star-message" id="starMessage">tap a star ✦</div>
+
+          <button class="pixel-btn next" id="starNext">there is one more thing →</button>
+        </div>
+      </div>
+
+      <div class="scene" data-scene="6">
+        <div class="scene-card wide">
+          <div class="scene-label">♡ A MEMORY STILL WAITING ♡</div>
+          <h2>Our best memory<br>hasn't happened yet.</h2>
+          <img class="future-cat" src="cat_heart.gif" alt="Cute pixel cat">
+          <p>
+            We haven't met in person yet.<br>
+            So I don't want to invent a “best memory.”
+          </p>
+          <p>
+            I want to make it with you.
+          </p>
+          <div class="future-note">
+            One day: a tight, warm hug…<br>
+            and me crying on your shoulder after all the waiting. ♡
+          </div>
+          <button class="pixel-btn next">open the last star →</button>
+        </div>
+      </div>
+
+      <div class="scene" data-scene="7">
+        <div class="scene-card final-card">
+          <div class="scene-label">♡ EVERY UNIVERSE ♡</div>
+          <h2>Piu, I hope you always know this.</h2>
+
+          <div class="letter">
+            <p>Sometimes you think I don't love you as much as you love me.</p>
+            <p>
+              I wish I could put my heart in your hands for five minutes,
+              just so you could feel how much love is actually there.
+            </p>
+            <p>
+              I love your voice. Your innocence. Your smile.
+              Your questions. Your heart. Your respect for people.
+              I love the silly girl who calls me pagal and noob.
+            </p>
+            <p>
+              And I love that after all our misunderstandings and clashes,
+              we are still here.
+            </p>
+            <p class="highlight">
+              You are one of the most precious parts of my life.
+            </p>
+            <p class="big">
+              In this universe, I choose you.<br>
+              In every other universe, I find you again.
+            </p>
+            <p class="signature">— your Frogii 🐸♡</p>
+          </div>
+
+          <button class="pixel-btn final-btn" id="finalBtn">♡ make my heart explode</button>
+          <div class="ending" id="ending">
+            <img src="cat_dance.gif" alt="Dancing pixel cat">
+            <h3>11 months down. ♡</h3>
+            <p>And there are still so many memories waiting for us.</p>
+            <div class="forever">Piu ♡ Frogii — every universe.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup-box">
+      <button class="popup-close" id="popupClose">×</button>
+      <div class="popup-heart">♥</div>
+      <p id="popupText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
